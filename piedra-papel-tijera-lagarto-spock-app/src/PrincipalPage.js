@@ -12,7 +12,7 @@ const PrincipalPage = () => {
     return (
         <>
             <h1>Bienvenido A Piedra,Papel,Tijera,Lagarto y Spock</h1>
-            <Button variant="danger" onClick={redirectToGame} size="lg" >Play</Button>
+            <Button variant="danger" onClick={redirectToGame} size="lg" >Play VS Computer</Button>
         </>
     );
 

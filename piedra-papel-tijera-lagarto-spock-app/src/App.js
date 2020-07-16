@@ -1,7 +1,8 @@
 import React from 'react';
 import PrincipalPage from './PrincipalPage';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Game from './Game';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+
 
 function App() {
   return (
