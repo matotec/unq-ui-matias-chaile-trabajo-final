@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import BotonJugar from './components/BotonJugar'
+import BotonJugar from './components/BotonJugar';
 import { useHistory } from 'react-router-dom';
 
 const Game = () => {
     const elecciones = ['Piedra', 'Papel', 'Tijera', 'Lagarto', 'Spock'];
     const [eleccionPc, setEleccionPc] = useState('');
     const [eleccionPlayer, setEleccionPlayer] = useState('');
+    const [condBotonJugar, setCondBotonJugar] = useState(true)
     const history = useHistory();
 
     const redirectToGame = () => {
@@ -16,6 +17,7 @@ const Game = () => {
     const eligioPlayer = (elec) => {
         setEleccionPlayer(elec)
         setEleccionPc(elecciones[eleccionRandom()])
+        setCondBotonJugar(false)
     }
 
     const eleccionRandom = () => {
@@ -32,7 +34,7 @@ const Game = () => {
             <Button variant="outline-danger" onClick={()=>eligioPlayer('Spock')}>Spock</Button>
 
             <div>
-                <BotonJugar eleccionPlayer1={eleccionPlayer} eleccionPc={eleccionPc}/>
+                <BotonJugar eleccionPlayer1={eleccionPlayer} eleccionPc={eleccionPc} deshabilitado={condBotonJugar}/>
             </div>
             <Button variant="danger" onClick={redirectToGame} size="lg" >Volver A Jugar</Button>
             

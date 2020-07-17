@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import ModalResult from './ModalResult';
 import Button from 'react-bootstrap/Button';
 
-const BotonJugar = ({ eleccionPlayer1, eleccionPc }) => {
-    
-    
+const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado}) => {
+    const [showModal, setShowModal] = useState(false)   
     const [resultado, setResultado] = useState('')
-
+    
     
 
     /* useEffect(() => {
@@ -61,10 +61,14 @@ const BotonJugar = ({ eleccionPlayer1, eleccionPc }) => {
         }
     }
 
-
     const play = () => {        
         let result = definirResultado()
         setResultado(result)
+        setShowModal(true) 
+    }
+
+    const closeModal = () => {
+        setShowModal(false)
     }
 
     console.log("la pc eligio", eleccionPc)
@@ -72,14 +76,16 @@ const BotonJugar = ({ eleccionPlayer1, eleccionPc }) => {
 
     return (
         <>
-            <Button variant="primary" size="lg" onClick={play} >Jugar</Button>
-            {resultado !== '' &&
+            <Button variant="primary" size="lg" onClick={play} disabled={deshabilitado}>Jugar</Button>
+            <ModalResult eleccionPlayerOne={eleccionPlayer1} eleccionIA={eleccionPc} result={resultado} showMyModal={showModal} closeModal={closeModal}/>
+            {/* {showModal && <ModalResult/>} */} 
+            {/* {resultado !== '' &&
                 <>
                     <h1>Player1 eligio {eleccionPlayer1}</h1>
                     <h1>Pc eligio {eleccionPc}</h1>
                     <h1>you {resultado}</h1>
                 </>
-            }
+            } */}
 
         </>
     )
