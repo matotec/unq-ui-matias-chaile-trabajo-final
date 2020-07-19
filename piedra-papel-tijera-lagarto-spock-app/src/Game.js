@@ -10,7 +10,7 @@ const Game = () => {
     const [condBotonJugar, setCondBotonJugar] = useState(true)
     const history = useHistory();
 
-    const redirectToGame = () => {
+    const redirectToPrincipal = () => {
         history.push("/")        
     }
 
@@ -18,6 +18,10 @@ const Game = () => {
         setEleccionPlayer(elec)
         setEleccionPc(elecciones[eleccionRandom()])
         setCondBotonJugar(false)
+    }
+
+    const resetBotonJugar = () => {
+        setCondBotonJugar(true)
     }
 
     const eleccionRandom = () => {
@@ -34,9 +38,9 @@ const Game = () => {
             <Button variant="outline-danger" onClick={()=>eligioPlayer('Spock')}>Spock</Button>
 
             <div>
-                <BotonJugar eleccionPlayer1={eleccionPlayer} eleccionPc={eleccionPc} deshabilitado={condBotonJugar}/>
+                <BotonJugar eleccionPlayer1={eleccionPlayer} eleccionPc={eleccionPc} deshabilitado={condBotonJugar} resetBoton={resetBotonJugar}/>
             </div>
-            <Button variant="danger" onClick={redirectToGame} size="lg" >Volver A Jugar</Button>
+            <Button variant="danger" onClick={redirectToPrincipal} size="lg" >Volver A Jugar</Button>
             
         </>
     )

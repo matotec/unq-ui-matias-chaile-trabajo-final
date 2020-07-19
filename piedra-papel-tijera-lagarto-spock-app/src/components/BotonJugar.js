@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import ModalResult from './ModalResult';
 import Button from 'react-bootstrap/Button';
 
-const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado}) => {
+const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado, resetBoton}) => {
     const [showModal, setShowModal] = useState(false)   
     const [resultado, setResultado] = useState('')
-    
+    const [scorePlayer1, setScorePlayer1] = useState(0)
     
 
-    /* useEffect(() => {
-        play()
-    }, []
-    ) */
-
+    const play = () => {        
+        let result = definirResultado()
+        scoreCant(result)
+        setResultado(result)
+        setShowModal(true) 
+    }
 
     const definirResultado = () => {
 
@@ -53,7 +54,7 @@ const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado}) => {
         }
         if (eleccionPlayer1 === 'Spock') {
             if (eleccionPc === 'Piedra' || eleccionPc === 'Tijera') {
-                return 'win'
+                return 'Win'
             }
             if (eleccionPc === 'Papel' || eleccionPc === 'Lagarto') {
                 return 'Lose'
@@ -61,14 +62,17 @@ const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado}) => {
         }
     }
 
-    const play = () => {        
-        let result = definirResultado()
-        setResultado(result)
-        setShowModal(true) 
-    }
+    
 
     const closeModal = () => {
         setShowModal(false)
+        resetBoton()
+    }
+
+    const scoreCant = (result) => {
+        if(result === 'Win'){
+            setScorePlayer1(scorePlayer1 +1)
+        }
     }
 
     console.log("la pc eligio", eleccionPc)
@@ -77,16 +81,7 @@ const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado}) => {
     return (
         <>
             <Button variant="primary" size="lg" onClick={play} disabled={deshabilitado}>Jugar</Button>
-            <ModalResult eleccionPlayerOne={eleccionPlayer1} eleccionIA={eleccionPc} result={resultado} showMyModal={showModal} closeModal={closeModal}/>
-            {/* {showModal && <ModalResult/>} */} 
-            {/* {resultado !== '' &&
-                <>
-                    <h1>Player1 eligio {eleccionPlayer1}</h1>
-                    <h1>Pc eligio {eleccionPc}</h1>
-                    <h1>you {resultado}</h1>
-                </>
-            } */}
-
+            <ModalResult eleccionPlayerOne={eleccionPlayer1} eleccionIA={eleccionPc} result={resultado} showMyModal={showModal} closeModal={closeModal} scorePlayerOne={scorePlayer1}/>
         </>
     )
 }
