@@ -29,17 +29,17 @@ const PrincipalPage = () => {
         <>
             <Container /* id="pagePrincipal" */ fluid>
                 <Row >
-                    <Col>
+                    <Col  /* xs={12} */  /* sm={4} */ md={12} className="justify-content-lg-center mx-auto">
                         <h1 id="tituloGame">Bienvenido A Piedra,Papel,Tijera,Lagarto y Spock</h1>
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center" >
-                    <Col  >
+                <Row >
+                    <Col  md={4} xl={3} lg={5} className="justify-content-lg-center mx-auto" >
                         <Image id="imagenSheldon" src={imagenSheldon} roundedCircle />
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center mt-2" >
-                <Col  >
+                <Row >
+                <Col md={4} xl={5} lg={5} className="justify-content-lg-center mx-auto" >
                 <Button variant="danger" id="versusPc" onClick={redirectToGame} size="lg">Computer</Button>                
                 <Button variant="danger" id="twoPlayers" onClick={redirectToGameTwoPlayer} size="lg" >Player1 VS Player2</Button>
                 </Col>
