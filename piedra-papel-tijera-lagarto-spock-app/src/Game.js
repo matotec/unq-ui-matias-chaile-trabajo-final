@@ -3,6 +3,14 @@ import Button from 'react-bootstrap/Button';
 import BotonJugar from './components/BotonJugar';
 import { useHistory } from 'react-router-dom';
 
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Image from 'react-bootstrap/Image';
+
+import './styles/game.css';
+import './styles/botonesJugada.css'
+
 const Game = () => {
     const elecciones = ['Piedra', 'Papel', 'Tijera', 'Lagarto', 'Spock'];
     const [eleccionPc, setEleccionPc] = useState('');
@@ -30,18 +38,19 @@ const Game = () => {
 
     return (
         <>
-            <h1>elegir opciones</h1>
-            <Button variant="outline-primary" onClick={()=> eligioPlayer('Piedra')}>Piedra</Button>
-            <Button variant="outline-secondary" onClick={()=> eligioPlayer('Papel')}>Papel</Button>
-            <Button variant="outline-success" onClick={()=> eligioPlayer('Tijera')}>Tijera</Button>
-            <Button variant="outline-warning" onClick={()=> eligioPlayer('Lagarto')}>Lagarto</Button>
-            <Button variant="outline-danger" onClick={()=>eligioPlayer('Spock')}>Spock</Button>
+            <Container fluid /* id="pageGame" */>
+            <h1 id="eleccionJugador">Elegir jugada</h1>
+            <Button variant="outline-primary" id="botonPiedra" onClick={()=> eligioPlayer('Piedra')}>Piedra</Button>
+            <Button variant="outline-secondary" id="botonPapel" onClick={()=> eligioPlayer('Papel')}>Papel</Button>
+            <Button variant="outline-success" id="botonTijera" onClick={()=> eligioPlayer('Tijera')}>Tijera</Button>
+            <Button variant="outline-warning" id="botonLagarto" onClick={()=> eligioPlayer('Lagarto')}>Lagarto</Button>
+            <Button variant="outline-danger" id="botonSpock" onClick={()=>eligioPlayer('Spock')}>Spock</Button>
 
             <div>
                 <BotonJugar eleccionPlayer1={eleccionPlayer} eleccionPc={eleccionPc} deshabilitado={condBotonJugar} resetBoton={resetBotonJugar}/>
             </div>
-            <Button variant="danger" onClick={redirectToPrincipal} size="lg" >Volver A Jugar</Button>
-            
+            <Button variant="danger" id="exitBoton" onClick={redirectToPrincipal} size="lg" >Salir</Button>
+            </Container>
         </>
     )
 }

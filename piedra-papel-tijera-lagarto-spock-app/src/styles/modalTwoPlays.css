@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#fondoModal{
+    background-color: rgb(178, 178, 201);
+}
+
+#resultado{
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 5px 5px rgb(24, 63, 65);
+}
+
+#score{
+    font-family: 'Press Start 2P', cursive ;
+    color: rgb(19, 12, 12);
+    background-color: rgb(128, 129, 211);
+    text-shadow: 2px 5px 5px rgb(24, 63, 65);
+    padding: 4px;
+    margin: 2px;
+}
+
+#playAgain{
+    font-family: 'Press Start 2P', cursive ;
+    color: rgb(19, 12, 12);   
+    text-shadow: 2px 5px 5px rgb(24, 63, 65);
+    border-radius: 10px;
+}
+
+#fondoFooter{
+    background-color: rgb(120, 149, 228);
+}

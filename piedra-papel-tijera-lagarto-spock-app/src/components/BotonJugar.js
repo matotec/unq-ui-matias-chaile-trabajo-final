@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ModalResult from './ModalResult';
 import Button from 'react-bootstrap/Button';
 
+import '../styles/game.css';
+
 const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado, resetBoton}) => {
     const [showModal, setShowModal] = useState(false)   
     const [resultado, setResultado] = useState('')
@@ -80,7 +82,7 @@ const BotonJugar = ({ eleccionPlayer1, eleccionPc, deshabilitado, resetBoton}) =
 
     return (
         <>
-            <Button variant="primary" size="lg" onClick={play} disabled={deshabilitado}>Jugar</Button>
+            <Button variant="primary" id="botonPlay" size="lg" onClick={play} disabled={deshabilitado}>Jugar</Button>
             <ModalResult eleccionPlayerOne={eleccionPlayer1} eleccionIA={eleccionPc} result={resultado} showMyModal={showModal} closeModal={closeModal} scorePlayerOne={scorePlayer1}/>
         </>
     )

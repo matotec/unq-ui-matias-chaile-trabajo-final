@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+#botonPiedra{
+    background: url('../imagesAndAudio/piedra.png') center no-repeat ;
+    background-size: 90% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(34, 16, 16);
+    border-radius: 30px;
+    margin: 10px;
+    padding-top: 170px;
+    border-width: 5px;
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);    
+}
+
+#botonPiedra:hover{
+    transition: all .3s;
+    transform: scale(1.1);
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonPapel{
+    background: url('../imagesAndAudio/papel.png') center no-repeat;
+    background-size: 85% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(34, 16, 16);
+    border-radius: 30px;
+    margin: 10px;
+    padding-top: 170px;
+    border-width: 5px;
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonPapel:hover{
+    transition: all .3s;
+    transform: scale(1.1);
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonTijera{
+    background: url('../imagesAndAudio/tijera.png') center no-repeat;
+    background-size: 85% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(34, 16, 16);
+    border-radius: 30px;
+    margin: 10px;
+    padding-top: 170px;
+    border-width: 5px;
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonTijera:hover{
+    transition: all .3s;
+    transform: scale(1.1);
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonLagarto{
+    background: url('../imagesAndAudio/lagarto.png') center no-repeat;
+    background-size: 62% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(34, 16, 16);
+    border-radius: 30px;
+    margin: 10px;
+    padding-top: 170px;
+    border-width: 5px;
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonLagarto:hover{
+    transition: all .3s;
+    transform: scale(1.1);
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#botonSpock{
+    background: url('../imagesAndAudio/spock.png') center no-repeat;
+    background-size: 80% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(34, 16, 16);
+    border-radius: 30px;
+    margin: 10px;
+    padding-top: 170px;
+    border-width: 5px;
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#botonSpock:hover{
+    transition: all .3s;
+    transform: scale(1.1);
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+

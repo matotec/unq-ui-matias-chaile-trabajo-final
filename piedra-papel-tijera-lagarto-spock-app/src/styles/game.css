@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#pageGame{
+    width: 100%;
+    height: 100vmax;  
+    background-size: 100% 100%;  
+    background-color: #434647;
+    /* display: flex;
+    width: 100vmax;
+    height: 100vh;  
+    background-color: #434647; */
+}
+
+#exitBoton{
+    background: url('../imagesAndAudio/exit.png') center no-repeat;
+    background-size: 90% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(34, 16, 16);
+    border-width: 5px;
+    border-color: #0c0c0c;   
+    font-size: medium;
+    border-radius: 30px;
+    padding-left: 90px;
+    padding-bottom: 40px;    
+    margin: 10px;
+}
+
+#botonPlay{
+    background: url('../imagesAndAudio/button_play_.png') center;
+    background-size: 100% ;    
+    background-color: #2190A8;
+    width: 200px;
+    height: 200px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 5px 5px rgb(24, 63, 65);
+    color: rgb(34, 16, 16);
+    border-width: 5px;
+    border-color: #0c0c0c;   
+    border-radius: 100px;
+    font-size: small;
+    margin: 10px;    
+}
+
+#eleccionJugador{
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 5px 5px rgb(24, 63, 65);
+    color: rgb(24, 22, 22);
+    font-size: xx-large;
+    text-align: center;    
+    padding: 10px;
+    padding-top: 30px;
+}
