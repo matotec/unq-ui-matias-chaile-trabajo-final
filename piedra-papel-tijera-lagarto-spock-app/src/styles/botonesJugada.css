@@ -13,7 +13,7 @@
     margin: 10px;
     padding-top: 170px;
     border-width: 5px;
-    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);    
+    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);   
 }
 
 #botonPiedra:hover{
@@ -99,8 +99,6 @@
     border-width: 5px;
     box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
 }
-
-
 
 #botonSpock:hover{
     transition: all .3s;

@@ -12,16 +12,17 @@ import { useHistory } from 'react-router-dom';
 
 const PrincipalPage = () => {
     const audio = new Audio(sonidoJuego);
-    audio.autoplay = true;
     audio.volume = 0.2;
     const history = useHistory();
 
     const redirectToGame = () => {
         history.push("/game")
+        audio.play()
     }
 
     const redirectToGameTwoPlayer = () => {
         history.push("/twoPlayers")
+        audio.play()
     }
 
     return (
@@ -37,7 +38,7 @@ const PrincipalPage = () => {
                         <Image id="imagenSheldon" src={imagenSheldon} roundedCircle />
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center pt-5" >
+                <Row className="justify-content-md-center mt-2" >
                 <Col  >
                 <Button variant="danger" id="versusPc" onClick={redirectToGame} size="lg">Computer</Button>                
                 <Button variant="danger" id="twoPlayers" onClick={redirectToGameTwoPlayer} size="lg" >Player1 VS Player2</Button>

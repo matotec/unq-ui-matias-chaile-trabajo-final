@@ -19,29 +19,30 @@
 }
 
 #versusPc{
-    background: url('../imagesAndAudio/versus.svg') center;
+    background: url('../imagesAndAudio/versus.svg') center no-repeat;
     background-size: 100% ;    
-    background-color: #2190A8;
+    background-color: #1f2729;
+    margin-right: 4px;
     width: 300px;
     height: 300px;
     font-family: 'Press Start 2P', cursive;
-    color: rgb(34, 16, 16);
+    color: rgb(230, 212, 212);
     border-width: 5px;
     border-color: #0c0c0c;   
     border-radius: 30px;
-    padding: 20px;
+    padding: 20px;    
     padding-top: 260px;    
 }
 
 #twoPlayers{
-    background: url('../imagesAndAudio/twoPlayers.svg') center;
+    background: url('../imagesAndAudio/twoPlayers.svg') center no-repeat;
     background-size: 100% 100%;
     padding-top: 258px;
-    background-color: #2190A8;
+    background-color: #1f2729;
     width: 300px;
     height: 300px;
     font-family: 'Press Start 2P', cursive;
-    color: rgb(34, 16, 16);
+    color: rgb(230, 212, 212);
     line-height: 50px;
     font-size: small;
     border-width: 5px;
@@ -52,11 +53,11 @@
 
 #imagenSheldon{
     /* background-size: cover; */
-    display: block;
+    /* display: block; */
     background-color: black;
     border-style: solid;
     border-color: black;
-    width: 100%;
-    /* height: 400px; */ 
+    width: 20%;
+    height: 440px;  
     
 }

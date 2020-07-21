@@ -3,6 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
 import BotonJugarTwoPlayers from './components/BotonJugarTwoPlayers';
 import { useHistory } from 'react-router-dom';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+
 
 import './styles/game.css';
 import './styles/botonesJugada.css'
@@ -32,12 +35,10 @@ const TwoPlayers = () => {
     }
 
     const enabledBotonJugar = () => {
-        if( condBotonJugadaP1 || condBotonJugadaP2 )
-            setCondBotonJugar(false)            
+        if (condBotonJugadaP1 || condBotonJugadaP2)
+            setCondBotonJugar(false)
     }
-    /* console.log(condBotonJugadaP1)
-    console.log(condBotonJugadaP2)
-    console.log(condBotonJugar) */
+
     const resetBotonJugar = () => {
         setCondBotonJugar(true)
         setCondBotonJugadaP1(false)
@@ -47,26 +48,44 @@ const TwoPlayers = () => {
     return (
         <>
             <Container fluid /* id="pageGame" */>
-            <h1 id="eleccionJugador">Player1 elegir jugada</h1>
-            <Button variant="outline-primary" id="botonPiedra" onClick={() =>{eleccionPlayerOne('Piedra')}} disabled={condBotonJugadaP1}>Piedra</Button>
-            <Button variant="outline-secondary" id="botonPapel" onClick={() =>{eleccionPlayerOne('Papel')}} disabled={condBotonJugadaP1}>Papel</Button>
-            <Button variant="outline-success" id="botonTijera" onClick={() =>{eleccionPlayerOne('Tijera')}} disabled={condBotonJugadaP1}>Tijera</Button>
-            <Button variant="outline-warning" id="botonLagarto" onClick={() =>{eleccionPlayerOne('Lagarto')}} disabled={condBotonJugadaP1}>Lagarto</Button>
-            <Button variant="outline-danger" id="botonSpock" onClick={() =>{eleccionPlayerOne('Spock')}} disabled={condBotonJugadaP1}>Spock</Button>
-
-            <h1 id="eleccionJugador">Player2 elegir jugada</h1>
-            <Button variant="outline-primary" id="botonPiedra" onClick={() =>{eleccionPlayerTwo('Piedra')}} disabled={condBotonJugadaP2}>Piedra</Button>
-            <Button variant="outline-secondary" id="botonPapel" onClick={() =>{eleccionPlayerTwo('Papel')}} disabled={condBotonJugadaP2}>Papel</Button>
-            <Button variant="outline-success" id="botonTijera" onClick={() =>{eleccionPlayerTwo('Tijera')}} disabled={condBotonJugadaP2}>Tijera</Button>
-            <Button variant="outline-warning" id="botonLagarto" onClick={() =>{eleccionPlayerTwo('Lagarto')}} disabled={condBotonJugadaP2}>Lagarto</Button>
-            <Button variant="outline-danger" id="botonSpock" onClick={() =>{eleccionPlayerTwo('Spock')}} disabled={condBotonJugadaP2}>Spock</Button>
-            <div>
-            <BotonJugarTwoPlayers eleccionPlayer1={eleccionPlayer1} eleccionPlayer2={eleccionPlayer2} deshabilitado={condBotonJugar} resetBoton={resetBotonJugar}/>
-            </div>
-            
-            <div>
-            <Button variant="danger" id="exitBoton" onClick={redirectToPrincipal} size="lg" >Salir</Button>
-            </div>
+                <Row>
+                    <Col md={12}>
+                        <h1 id="eleccionJugador">Player1 elegir jugada</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} lg={8} className="justify-content-lg-center mx-auto">
+                        <Button variant="outline-primary" id="botonPiedra" onClick={() => { eleccionPlayerOne('Piedra') }} disabled={condBotonJugadaP1}>Piedra</Button>
+                        <Button variant="outline-secondary" id="botonPapel" onClick={() => { eleccionPlayerOne('Papel') }} disabled={condBotonJugadaP1}>Papel</Button>
+                        <Button variant="outline-success" id="botonTijera" onClick={() => { eleccionPlayerOne('Tijera') }} disabled={condBotonJugadaP1}>Tijera</Button>
+                        <Button variant="outline-warning" id="botonLagarto" onClick={() => { eleccionPlayerOne('Lagarto') }} disabled={condBotonJugadaP1}>Lagarto</Button>
+                        <Button variant="outline-danger" id="botonSpock" onClick={() => { eleccionPlayerOne('Spock') }} disabled={condBotonJugadaP1}>Spock</Button>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12}>
+                        <h1 id="eleccionJugador">Player2 elegir jugada</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} lg={8} className="justify-content-lg-center mx-auto">
+                        <Button variant="outline-primary" id="botonPiedra" onClick={() => { eleccionPlayerTwo('Piedra') }} disabled={condBotonJugadaP2}>Piedra</Button>
+                        <Button variant="outline-secondary" id="botonPapel" onClick={() => { eleccionPlayerTwo('Papel') }} disabled={condBotonJugadaP2}>Papel</Button>
+                        <Button variant="outline-success" id="botonTijera" onClick={() => { eleccionPlayerTwo('Tijera') }} disabled={condBotonJugadaP2}>Tijera</Button>
+                        <Button variant="outline-warning" id="botonLagarto" onClick={() => { eleccionPlayerTwo('Lagarto') }} disabled={condBotonJugadaP2}>Lagarto</Button>
+                        <Button variant="outline-danger" id="botonSpock" onClick={() => { eleccionPlayerTwo('Spock') }} disabled={condBotonJugadaP2}>Spock</Button>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={5} lg={2} className="justify-content-lg-center mx-auto">
+                        <BotonJugarTwoPlayers eleccionPlayer1={eleccionPlayer1} eleccionPlayer2={eleccionPlayer2} deshabilitado={condBotonJugar} resetBoton={resetBotonJugar} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={5} lg={2} className="justify-content-lg-center mx-auto">
+                        <Button variant="danger" id="exitBoton" onClick={redirectToPrincipal} size="lg" >Salir</Button>
+                    </Col>
+                </Row>
             </Container>
         </>
     )
