@@ -21,8 +21,8 @@ const ModalResult = ({ eleccionPlayerOne, eleccionIA, result, showMyModal, close
                 
                     
                 <p id="resultado">
-                    Player1 eligio {eleccionPlayerOne}<br />
-                    Pc eligio {eleccionIA}
+                    Player1 eligió {eleccionPlayerOne}<br />
+                    Pc eligió {eleccionIA}
                 </p>
             </Modal.Body>
             <Modal.Footer id="fondoFooter">

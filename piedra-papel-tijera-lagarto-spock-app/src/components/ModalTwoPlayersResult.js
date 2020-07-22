@@ -29,8 +29,8 @@ const ModalTwoPlayersResult = ({ eleccionPlayerOne, eleccionPlayerTwo, result, s
                         </div>
                 </Badge>
                 <p id="resultado">
-                    Player1 eligio {eleccionPlayerOne}<br />
-                    Player2 eligio {eleccionPlayerTwo}
+                    Player1 eligió {eleccionPlayerOne}<br />
+                    Player2 eligió {eleccionPlayerTwo}
                 </p>
             </Modal.Body>
             <Modal.Footer id="fondoFooter">
